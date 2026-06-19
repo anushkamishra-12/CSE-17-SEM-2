@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of N Numbers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f0f8ff;
+        }
+
+        .container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        input, button {
+            padding: 8px;
+            margin: 10px;
+            width: 80%;
+        }
+
+        #result {
+            font-size: 18px;
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Sum of N Numbers</h2>
+
+    <input type="number" id="num" placeholder="Enter N">
+    <br>
+
+    <button onclick="calculateSum()">Find Sum</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+function calculateSum() {
+    let n = parseInt(document.getElementById("num").value);
+    let sum = 0;
+
+    for (let i = 1; i <= n; i++) {
+        sum += i;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Sum of first " + n + " numbers = " + sum;
+}
+</script>
+
+</body>
+</html>
